@@ -10,8 +10,6 @@ class IO
     seplen = sep.length
 
     seek 0, SEEK_END
-    return if pos == 0
-
     while pos > 0
       bytes = [bufsz, pos].min
       seek -bytes, SEEK_CUR
